@@ -9,16 +9,17 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)   // title required
+    @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)   // author required
+    @Column(nullable = false)
     private String author;
 
-    @Column(nullable = false, unique = true)  // isbn unique & required
+    @Column(nullable = false, unique = true)
     private String isbn;
 
-    private boolean available = true; // true if book can be borrowed
+    @Column(nullable = false)
+    private Boolean available = true;
 
     public Book() {
     }

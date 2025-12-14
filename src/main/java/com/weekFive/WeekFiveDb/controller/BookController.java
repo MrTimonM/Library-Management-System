@@ -18,6 +18,7 @@ public class BookController {
 
     @PostMapping
     public Book createBook(@RequestBody Book book) {
+        book.setAvailable(true);
         return bookService.addBook(book);
     }
 
